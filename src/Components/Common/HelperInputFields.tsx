@@ -37,13 +37,13 @@ export interface MultiSelectInputProps extends Omit<SelectProps, 'onChange'> {
     onChange?: (e: any, child?: any) => void,
 }
 
-export interface DefaultNativeSelectInputProps extends NativeSelectInputProps {
-    options: Array<{ id: string | number, text?: string }>,
-    placeholder?: string;
-    label?: string;
-    optionKey?: string,
-    optionValue?: string,
-}
+// export interface DefaultNativeSelectInputProps extends NativeSelectInputProps {
+//     options: Array<{ id: string | number, text?: string }>,
+//     placeholder?: string;
+//     label?: string;
+//     optionKey?: string,
+//     optionValue?: string,
+// }
 
 // Type Declarations
 type TextFieldPropsExtended = TextFieldProps & { errors: string }
@@ -241,7 +241,7 @@ export const ShowCheckboxOptions = (props: OptionsProps) => {
     );
 };
 
-export const NativeSelectField = (props: DefaultNativeSelectInputProps) => {
+export const NativeSelectField = (props: any) => {
     const { options, variant, label, optionKey, optionValue, ...others } = props;
     return (
         <FormControl style={{ width: "100%" }} variant={variant} margin="dense">
